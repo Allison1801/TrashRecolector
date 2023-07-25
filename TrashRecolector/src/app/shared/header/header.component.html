@@ -1,0 +1,98 @@
+<div id="header">
+    <div id="menu" >
+      <button id="menu-icon" pButton (click)="visibleSidebar1 = true" icon="pi pi-bars" class="reasonButton" ></button>
+    </div>
+    <div id="title">TrashRecolector</div>
+     <div id="texto" >Por una ciudad más limpia</div>
+     <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000" [style]="{'background-color':'#162748'}">
+  
+        <div  id="sidebar" >
+          <h3 class="text-light" >  Bienvenido </h3>
+          <div>
+            <hr class="text-white">
+          </div>
+         
+         
+          <div class="list-group List-reset">
+            <p-panelMenu [style]="{'width':'270px','margin-top':'20px'}"  [model]="items"  ></p-panelMenu>
+          </div>
+          <hr class="text-white">
+        </div>
+       
+       </p-sidebar>
+    <div id="menu-horizontal">
+        <ul>
+          <li class="active"> <a [routerLink]="[ '/home']">Home</a></li>
+          <li><a [routerLink]="[ '/perfil']">Perfil</a></li>
+          <li><a (click)="showConfirm()" >Cerrar sesión</a></li>
+          <p-toast></p-toast>
+           <li><a (click)=" showDialogInput()" >Contáctanos</a></li>
+        </ul>
+      </div>
+    <div id="bottom">
+      <div id="rectangle1" class="rectangle"></div>
+      <div id="rectangle2" class="rectangle"></div>
+      <div id="rectangle3" class="rectangle"></div>
+      <div id="rectangle4" class="rectangle"></div>
+    </div>
+  </div>
+
+<p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="5000">
+    <ng-template let-message pTemplate="message">
+        <div class="flex flex-column" style="flex: 1">
+            <div class="text-center">
+                <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+                <h4>{{message.summary}}</h4>
+                <p>{{message.detail}}</p>
+            </div>
+            <div class="grid p-fluid">
+                <div class="col-6">
+                    <button type="button" pButton (click)="onConfirm()" label="Yes" class="p-button-success"></button>
+                </div>
+                <div class="col-6">
+                    <button type="button" pButton (click)="onReject()" label="No" class="p-button-secondary"></button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-toast>
+
+
+<p-dialog class="dialogo" header="TrashRecolector"  [(visible)]="visible" [style]="{width: '50vw'}"  [modal]="true" [draggable]="false" [resizable]="false"[breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+  <h1>Contáctanos</h1>
+      <p class="m-0">
+       Escribe tu información y dudas aqui para que podamos contactarte
+      </p>
+       <form [formGroup]="nuevoForm" (ngSubmit)="enviarComentario()">
+        <div class="formulario">
+          <div class="contact-form">
+            <div id="form">
+              Comentario: 
+             </div>
+            <div class="p-inputgroup ui-grid-col-6">
+              <textarea cols="30" rows="5" formControlName="comentario" name="comentario" [(ngModel)]="comentario"></textarea>
+            </div>
+            <div id="form">
+              Correo: 
+             </div>
+            <div class="p-inputgroup ui-grid-col-6">
+              <input type="email" class="form-control" id="correo" formControlName="correo" placeholder="Email" name="correo" [(ngModel)]="correo">
+            </div>
+
+            <div class="form-group">        
+              <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" onclick="" class="btn btn-default">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </form>
+
+  <ng-template pTemplate="footer">
+    <a href="https://www.facebook.com/Urvaseo/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/Urvaseo/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+  </ng-template>
+</p-dialog>
+
+
+  

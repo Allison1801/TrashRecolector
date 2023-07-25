@@ -1,0 +1,176 @@
+
+
+  .container {
+    margin-top: 120px;
+    max-width: 1090px;
+    height: 446px;
+    background-color: #e2e2e2;
+    position: relative;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    margin-left: auto;
+  margin-right: auto;
+  }
+ 
+  
+  .mensaje{
+    margin-top: 70px;
+    margin-left: 5%;
+  }
+
+  #msj{
+    font-family:fantasy;
+    font-size: 5vw;
+    color:  #162748;
+  }
+
+  img{
+    width:60px;
+    margin-bottom: 10px;
+    
+  }
+
+  #text1,text2{
+    font-family: 'Quicksand';
+    font-size: 1.3vw;
+  }
+ 
+ 
+  
+  
+  .content {
+    width: 80%;
+    max-width: 449px;
+    height: 558px;
+    background-color: white;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    animation-duration: 3s;
+   
+  }
+  
+  
+  .title {
+    font-family:sans-serif;
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #162748;
+  }
+
+  #regis{
+    justify-content: center;
+  }
+  
+  input{
+    border: 1px solid #162748;
+    border-radius: 2px;   
+  }
+  
+  #form{
+    margin-top: 10px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    
+  }  
+  
+  .p-inputgroup {
+    padding: 0.5rem;
+  }
+
+  .p-inputgroup-addon{
+    background-color: #162748;
+    color: white;
+  }
+  
+  .button {
+    width: 220px;
+    height: 40px;
+    background-color: #F6A700;
+    color: #fff;
+    margin-top: 10px;
+    border: 1px solid  #F6A700;
+    border-radius: 10px;
+  } 
+
+  
+.contact-form button {
+  margin-left:15%;
+  background: #25274d;
+  color: #fff;
+  font-weight: 600;
+  width: 85%;
+  margin-top: 15px;
+}
+
+.contact-form button:hover{
+  background-color: white;
+  color: #162748;
+  border: solid 2px #162748;
+}
+
+  @media (max-width: 430px) {
+
+    .container{
+      width: 95%;
+      margin-top: 15px;
+      height: 120px;
+      margin-bottom: 500px;
+    }
+    .mensaje {
+      margin-top: 5px;
+      margin-left: 5%;
+    }
+    
+    .content{
+      width: 100%;
+      height: 450px;
+      top: 130px;
+     
+    }
+    .p-inputgroup {
+      padding: 0.5rem;
+      width: 200px;
+      height: 50px;
+    }
+    .title {
+      margin-top:5px;
+     font-size: 20px;
+    
+    }
+  
+    .button{
+      height:25px;
+      margin-top: 5px;
+    }
+    
+  #text1,
+  #text2 {
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 10px;
+  }
+  
+  #msj {
+   text-align: center;
+   
+  }
+  #form{
+    margin-top: -10px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    
+  }  
+  
+    
+  }

@@ -1,0 +1,240 @@
+
+.our-team-main
+{
+	width:100%;
+	height:auto;
+	border-bottom:5px #162748 solid;
+  border-top:5px #162748 solid;
+	background:#fff;
+	text-align:center;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	transition:0.5s;
+	margin-bottom:28px;
+    box-shadow: -.1rem -.1rem 2rem #ccc,
+    -.5rem -.5rem 5rem #fff;
+}
+
+
+.our-team-main img
+{
+	border-radius:50%;
+	margin-bottom:20px;
+	width: 90px;
+}
+
+.our-team-main h3
+{
+	font-size:20px;
+	font-weight:700;
+}
+
+.our-team-main p
+{
+	margin-bottom:0;
+}
+
+.team-back
+{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:38px;
+	left:0;
+	padding:5px 15px 0 15px;
+	text-align:center;
+	background:#fff;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.team-back p{
+    margin-bottom: 20px;
+}
+.team-back a{
+    margin-top: 2px;
+    padding: 10px;
+    text-decoration: none;
+    height:30px;
+    background-color:  #F6A700;
+    color: #fff;
+    width: 100px;
+    border: solid 1px  #F6A700;
+    border-radius: 15px;
+}
+
+.team-front
+{
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:10;
+	background:#fff;
+	padding:15px;
+	bottom:0px;
+	transition: all 0.5s ease;
+    
+    
+}
+
+
+.our-team-main:hover .team-front
+{
+	bottom:-200px;
+	transition: all 0.5s ease;
+    
+}
+
+.our-team-main:hover
+{
+	border-color:#777;
+	transition:0.5s;
+    
+}
+
+.circle {
+    margin-bottom:20px;
+    width: 100px;
+    height: 100px;
+    background-color: #9c27b0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%; /* Mueve el elemento hacia arriba un 50% de la altura del contenedor */
+    left: 50%; /* Mueve el elemento hacia la izquierda un 50% de la anchura del contenedor */
+    transform: translate(-5%, -15%); /* Centrar verticalmente y horizontalmente */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+
+
+  #crc2{
+    background-color:#336699 ;
+  }
+
+  #crc3{
+    background-color:  #607d8b;
+  }
+  #crc4{
+    background-color:  #4caf50;
+  }
+  
+  #crc5{
+    background-color: #e91e63;
+  }
+  #crc6{
+    background-color:  #2196f3;
+  }
+  
+
+  .fa-map-marker {
+    color: white;
+    font-size: 60px;
+  }
+
+img{
+  margin-left: -15px;
+  margin-top: -10px;
+  width: 100%;
+  height: 400px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  margin-top:70px;
+
+ 
+}
+
+#tarjeta{
+  margin-top:130px;
+  background-color: #162748;
+  box-shadow: -.5rem -.5rem 5rem #ccc,
+  -.5rem -.5rem 5rem #fff;
+
+}
+
+#tarjeta {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-div {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.right-div {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: right;
+}
+
+.right-div h1 {
+  color: white;
+  margin-top: 0;
+}
+.right-div p{
+  color: white;
+  font-size:18px;
+
+}
+
+h1{
+  font-size: 50px;
+  font-family: 'Righteous';
+  margin-bottom: 30px;
+}
+
+
+
+
+/* responsive */
+@media screen and (max-width: 768px) {
+ 
+  #tarjeta {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+
+  .left-div,
+  .right-div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .right-div h1,p{
+    text-align: center;
+  }
+ 
+  .left-div img {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+	.our-team-main {
+		margin-bottom: 20px;
+	}
+
+	.our-team-main img {
+		width: 70px;
+   
+	}
+
+	.team-back a {
+		width: 80px;
+	}
+
+	.fa-map-marker {
+		font-size: 40px;
+	}
+
+}
+
+
+
+  

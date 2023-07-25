@@ -1,0 +1,127 @@
+<body>
+    <div class="container">
+        <div class="cards-container">
+            <div class="card">
+                <div class="title">
+                    <h1>Zona y Sector</h1>
+                    <hr>
+                </div>
+                <p>Conozca cuales son los horarios de recolección de acuerdo a su sector.
+                    <br>Por favor seleccione su zona y su sector: </p>
+                <div class="schedule">
+                    <div class="target">
+                        <div class="row mt-30">
+                            <div class="col-md-6">
+                                <div class="caja1">
+                                    <div class="box8">
+                                        <img class="pic-1" src="assets/zonas.png">
+                                        <h3 class="title">Zonas</h3>
+                                        <div class="box-content">
+                                            <div class="select-boxes">
+                                                <select name="zonas" id="zonas">
+                                                    <option value="zona1">Norte</option>
+                                                    <option value="zona2">Sur</option>
+                                                    <option value="zona3">Centro</option>
+                                                </select>
+                                                    <ul class="icon">
+                                                        <li><a href="#"><i class="fa fa-search"></i> </a> </li>
+                                                       
+                                                    </ul>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="caja2">
+                                    <div class="box8">
+                                        <img class="pic-1" src="assets/sector.jpg">
+                                        <h3 class="title">Sector</h3>
+                                        <div class="box-content">
+                                            <div class="select-boxes">
+                                                <select name="sector" id="sector">
+                                                    <option value="sector1">Sector 1</option>
+                                                    <option value="sector2">Sector 2</option>
+                                                    <option value="sector3">Sector 3</option>
+                                                </select>
+                                                <ul class="icon">
+                                                    <li><a href="#"><i class="fa fa-search"></i> </a> </li>
+                                                   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card black-card">
+                <div class="title">
+                    <h1>Horarios</h1>
+                    <hr>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-light ">
+                      <thead>
+                        <tr>
+                       
+                          <th scope="col">Tipo</th>
+                          <th scope="col">Horas</th>
+                          <th scope="col">Dias</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                        
+                          <td>Diurno</td>
+                          <td>7:00-18:00 pm </td>
+                          <td>Lunes - Miercoles - Viernes</td>
+                        </tr>
+                        <tr>
+                         
+                          <td>Nocturno</td>
+                          <td>19:00-23:00 pm</td>
+                          <td>Lunes - Miercoles - Viernes</td>
+                        </tr>
+                        <tr>
+                          <td>Diurno</td>
+                          <td>7:00-18:00 pm </td>
+                          <td>Martes - Jueves - Sábado</td>
+                        </tr>
+                        <tr>
+                            <td>Nocturno</td>
+                            <td>19:00-23:00 pm </td>
+                            <td>Martes - Jueves - Sábado</td>
+                          </tr>
+    
+                      </tbody>
+                  
+                    </table>
+                  </div>
+            </div>
+            
+    
+        </div>
+        <div class="card3">
+            <!-- New card -->
+            <div class="title3">
+                <h1> <img src="assets/foco.png"> Recuerda siempre que... </h1>
+                <hr>
+            </div>
+        <p-carousel class="custom" id="carou" [value]="banner" 
+                [autoplayInterval]="5000" 
+                [circular]="true">
+                <ng-template let-item pTemplate="item">
+                    <p-image [src]="item.image"  
+                            width="100%"
+                            height="600px">
+                    </p-image>
+                </ng-template>
+        </p-carousel>
+        </div>
+    </div>
+</body>

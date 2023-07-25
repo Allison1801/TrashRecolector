@@ -1,0 +1,28 @@
+CREATE TABLE Usuarios (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido  VARCHAR(50) NOT NULL,
+    Edad INT ,
+    Correo VARCHAR(50) NOT NULL,
+    Contra VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Login (
+    UsuarioID INT,
+    Correo VARCHAR(50) NOT NULL,
+    Contra VARCHAR(50) NOT NULL,
+FOREIGN KEY (UsuarioID) REFERENCES Usuarios(ID)
+);
+
+CREATE TABLE Comentarios (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    UsuarioID INT,
+    Comentario VARCHAR(100) NOT NULL,
+    FOREIGN KEY (UsuarioID) REFERENCES Usuarios(ID)
+);
+GO
+
+CREATE TABLE Sector (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL
+);

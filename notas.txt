@@ -1,0 +1,75 @@
+Método Eliminar del servicio:
+  public void EliminarUsuario(int usuarioId)
+        {
+            var usuario = _dbContext.Usuarios.Find(usuarioId);
+
+            if (usuario == null)
+            {
+                throw new InvalidOperationException("El usuario no existe");
+            }
+
+            _dbContext.Usuarios.Remove(usuario);
+            _dbContext.SaveChanges();
+
+            var login = _dbContext.Logins.Find(usuarioId);
+
+            if (login != null)
+            {
+                _dbContext.Logins.Remove(login);
+                _dbContext.SaveChanges();
+            }
+        }
+------------------------------------------------------
+Controller:
+
+ [HttpDelete("{usuarioId}")]
+        public IActionResult EliminarUsuario(int usuarioId)
+        {
+            _usuarioService.EliminarUsuario(usuarioId);
+
+            return Ok();
+        }
+    }
+
+
+---------------------------------------------------------
+Método Modificar:
+
+Controller
+   [HttpPut("{usuarioId}")]
+        public IActionResult ActualizarUsuario(int usuarioId, [FromBody] UsuarioInputModel inputModel)
+        {
+            _usuarioService.ActualizarUsuario(usuarioId, inputModel.Nombre, inputModel.Apellido, inputModel.Edad, inputModel.Correo, inputModel.Contra);
+            return Ok();
+        }
+
+------------------------------------------------------------------
+Service:
+
+    public void ActualizarUsuario(int usuarioId, string nombre, string apellido, int edad, string correo, string contra)
+        {
+            var usuario = _dbContext.Usuarios.Find(usuarioId);
+
+            if (usuario == null)
+            {
+                throw new InvalidOperationException("El usuario no existe");
+            }
+
+            usuario.Nombre = nombre;
+            usuario.Apellido = apellido;
+            usuario.Edad = edad;
+            usuario.Correo = correo;
+            usuario.Contra = contra;
+
+            _dbContext.SaveChanges();
+
+            var login = _dbContext.Logins.Find(usuarioId);
+
+            if (login != null)
+            {
+                login.Correo = correo;
+                login.Contra = contra;
+
+                _dbContext.SaveChanges();
+            }
+        }

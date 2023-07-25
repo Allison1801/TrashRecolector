@@ -1,0 +1,34 @@
+
+<body>
+    <div class="contenedor">
+
+        <div class="imagen">
+            <img src="assets/gye.jpg" >
+        </div>
+       
+    
+    <div class="container">
+     <h1> Mapa</h1>
+     <p>Elige tu zona y tu sector</p>
+     <select name="zonas" id="zonas">
+        <option value="zona1">Elige una zona</option>
+        <option value="zona1">Norte</option>
+        <option value="zona2">Sur</option>
+        <option value="zona3">Centro</option>
+    </select>
+    
+     <select name="sector" id="sector">
+        <option value="zona1">Elige un sector</option>
+        <option *ngFor="let item of _sectores" [value]="item.id">{{ item.nombre }}</option>
+    </select>
+  
+    </div>
+    
+    
+    </div>
+    <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15916.085640414378!2d33.185751550000006!3d-4.2160796!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stz!4v1538627227928" width="100%" height="630" frameborder="0" style="border:0"></iframe>
+    
+    </div>
+    
+</body>

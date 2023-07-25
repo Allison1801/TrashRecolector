@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="mensaje">
+        <h1 id="msj">Bienvenido</h1>
+        <hr class="text-white">
+        <p id="text1">Registrate con nosotros</p>
+        <hr class="text-white">
+    </div>
+   
+    <div class="right-div"></div>
+    <form (ngSubmit)="AgregarRegistro()" [formGroup]="nuevoForm" >
+      <div class="content animated_animated animate__fadeInLeft">
+      <h2 class="title">Registrar</h2>
+        <img src="assets/user.png" >
+
+        <div id="regis">
+            <div id="form">
+                Nombres: *
+            </div>
+            <div class="p-inputgroup ui-grid-col-6">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input  type="text" class="form-control"  class="ng-dirty ng-invalid mr-4" id="nombre" name="nombre"  [(ngModel)]="nombre"  formControlName="nombre"> 
+            </div>
+          
+
+            <div id="form">
+                Apellidos: *
+            </div>
+            <div class="p-inputgroup ui-grid-col-6">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" class="form-control"  class="ng-dirty ng-invalid mr-4" id="apellido" name="apellido"  [(ngModel)]="apellido" formControlName="apellido">
+               
+            </div>
+            
+
+
+            <div id="form">
+                Correo: *
+            </div>
+            <div class="p-inputgroup ui-grid-col-6">
+                <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+                <input type="text" class="form-control"  class="ng-dirty ng-invalid mr-4" id="correo" name="correo"  [(ngModel)]="correo" formControlName="correo">
+                
+            </div>
+            
+
+            <!-- <div id="form">
+                Contraseña: *
+            </div>
+            <div class="p-inputgroup ui-grid-col-6">
+                <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+                <input type="password" class="form-control"  class="ng-dirty ng-invalid mr-4" id="contra" name="contra"  [(ngModel)]="contra" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" formControlName="contra">
+                
+            </div> -->
+            
+        </div>
+      
+
+       
+        <button type="submit" onclick="" class="button">Registrar</button>
+      </div>
+    
+    </form>
+  </div>
+  <p-dialog class="dialogo"  (onHide)="onDialogHide()" header="TrashRecolector" [closable]="false" [(visible)]="visible" [style]="{width: '50vw'}"  [modal]="true" [draggable]="false" [resizable]="false"[breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
+    <h1>Cambio de Contraseña</h1>
+        <p class="m-0">
+         Antes de ingresar por favor, digita tu nueva contraseña
+        </p>
+         <form [formGroup]="nuevoForm" (ngSubmit)="cambiarContrasena()">
+          <div class="formulario">
+            <div class="contact-form">
+              <div id="form">
+                Contraseña actual: 
+               </div>
+              <div class="p-inputgroup ui-grid-col-6">
+                <input type="password" class="form-control" id="contrasena" formControlName="contrasena" placeholder="Contraseña Actual" name="contrasena" [(ngModel)]="contrasena" >
+              </div>
+              <div id="form">
+                Nueva Contraseña: 
+               </div>
+              <div class="p-inputgroup ui-grid-col-6">
+                <input type="password" class="form-control" id="Nuevacontra" formControlName="Nuevacontra" placeholder="Nueva Contraseña" name="Nuevacontra" [(ngModel)]="Nuevacontra" >
+              </div>
+  
+              <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" onclick="" >Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+         </form>
+  
+    <ng-template pTemplate="footer">
+      <a href="https://www.facebook.com/Urvaseo/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/Urvaseo/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </ng-template>
+  </p-dialog>
+
+ 

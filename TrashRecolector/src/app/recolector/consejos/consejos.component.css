@@ -1,0 +1,205 @@
+
+h1{
+    font-family:'Righteous';
+    margin-top: 100px;
+    text-align: center;
+    font-size:60px;
+    font-weight: bolder;
+    color:radial-gradient(circle at 50% 22.26%, #787874 0, #505467 25%, #1f3259 50%, #00154b 75%, #00003e 100%);;
+}
+  .container {
+    min-width:100%;
+    /* margin-left:-15px; */
+    margin-top: 80px;
+    margin-bottom:70px;
+    position: relative;
+  }
+  
+  .top {
+    position: absolute;
+    width:100%;
+    height: 563px;
+    background-image: radial-gradient(circle at 50% 22.26%, #787874 0, #505467 25%, #1f3259 50%, #00154b 75%, #00003e 100%);
+    z-index: -1;
+   
+  }
+  
+  .center {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  
+  .center img {
+    width: 100%;
+    height: 657px;
+    box-shadow: 0 0 2px 2px #162748;
+  }
+
+  /* .center {
+    position: relative;
+    width: 1240px;
+    height: 657px;
+    margin: 0 auto;
+  }
+
+
+  .center img {
+    margin-top: 8%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2px 2px #162748; 
+  }
+    */
+  .texto {
+    top: 40px;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    max-width: 527px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    font-family:'Chakra Petch';
+    margin: -5px auto 5px;
+    padding: 10px;
+    border-bottom:8px #162748 solid;
+   
+   
+  }
+  .texto p{
+    margin-top:20px;
+  }
+
+  /* consejos sustentables */
+  #tarjeta{
+    margin-top:110px;
+    background-color: #162748;
+    box-shadow: -.5rem -.5rem 5rem #ccc,
+    -.5rem -.5rem 5rem #fff;
+  
+  }
+  content{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  img{
+   
+    width: 100%;
+    height: 230px;
+  }
+
+  #tarjeta {
+    margin-left:30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .left-div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .right-div {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: right;
+  }
+  
+  .right-div  h1 {
+    font-size: 90px;
+    text-align: right;
+    color: white;
+    margin-top: 20px;
+    padding-right:20px;
+  }
+
+  .left-div h1{
+    font-size: 90px;
+    text-align: left;
+    color: white;
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+
+  .right-div p{
+    color: white;
+    font-size:25px;
+    padding-right:20px;
+    
+  }
+  .left-div p{
+    color: white;
+    font-size:25px;
+    padding-left: 20px;
+  }
+
+  
+/* responsive */
+@media screen and (max-width: 768px) {
+ 
+  #tarjeta {
+    width: 100%;
+    margin: 0 0;
+    flex-direction: column;
+    margin-top: 40px;
+   
+  }
+
+
+  .left-div,
+  .right-div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .right-div h1,p{
+    text-align: center;
+  }
+ 
+  .left-div img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .right-div img {
+    width: 100%;
+   
+  }
+}
+
+@media (min-width: 768px) {
+  /* Estilos para tablets y dispositivos con ancho de pantalla mínimo de 768px */
+  h1 {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+
+  .container {
+    margin-top: 70px;
+   
+  }
+
+  .top {
+    top: -10px;
+    height: 400px;
+  }
+
+  .center {
+    height: 500px;
+  }
+
+  .texto {
+    font-size: 20px;
+    margin: -5px auto 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Estilos para pantallas grandes, como laptops y escritorios */
+  .container {
+    margin-left: -15px;
+  }
+}
